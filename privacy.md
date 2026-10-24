@@ -113,5 +113,4 @@ If we change this policy, we will update the effective date above. If the change
 
 ## Contact
 
-Marco Rivolo, Sweden
-**[wizzy.appsupport@gmail.com](mailto:wizzy.appsupport@gmail.com)**
+Questions about this policy or your data: **[wizzy.appsupport@gmail.com](mailto:wizzy.appsupport@gmail.com)**
