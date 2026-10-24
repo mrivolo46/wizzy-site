@@ -13,7 +13,7 @@ Wizzy is an iPhone app that tells you about the landmarks you walk past. This po
 
 - Your location stays on your phone. Wizzy never uploads your coordinates; when you have an account, it only saves *which landmark* you visited.
 - You can use the map, stories and walks without an account.
-- If you create an account, we store your email, the name you choose, your interests, the landmarks you visited, your badges and your groups. That data is stored in Stockholm, Sweden.
+- If you create an account (with your email, Sign in with Apple or Sign in with Google), we store your email, the name you choose, your interests, the landmarks you visited, your badges and your groups. That data is stored in Stockholm, Sweden.
 - No ads, no tracking, no analytics, and we never sell your data.
 - You can delete your account and its data at any time from inside the app.
 
@@ -35,7 +35,9 @@ When you sign up and use Wizzy while signed in, we store the following on our se
 
 | Information | Why we need it |
 |---|---|
-| Email address and password | To create and secure your account, sign you in, and reset your password. Passwords are stored only in hashed form; we cannot read them. |
+| Email address and password (if you sign up with email) | To create and secure your account, sign you in, and reset your password. Passwords are stored only in hashed form; we cannot read them. |
+| If you use Sign in with Apple: your email address (or the private relay address Apple creates if you choose "Hide My Email") and an Apple account identifier. If you share it, your first name is used once to fill in your display name. | To create your account and sign you in. |
+| If you use Sign in with Google: your email address, your name and profile picture link as provided by Google, and a Google account identifier. | To create your account and sign you in. |
 | Display name and interests | To personalise walks and to show your name to people in your groups. |
 | Landmarks you visited (which landmark, when, and whether you were pinged or marked it yourself) | To keep your progress and badges across devices. |
 | Badges you earned | To show your achievements. |
@@ -73,6 +75,7 @@ We do not sell your data and do not share it for advertising. We use a small num
 
 - **Supabase** (Supabase Inc.) hosts our database and account system. Your account data is stored in Amazon Web Services' Stockholm region in Sweden. Supabase is a US company; where its staff may access data from outside the EU (for example for support), this is covered by the EU Standard Contractual Clauses in Supabase's data processing agreement.
 - **Our email delivery provider** sends account emails, such as password reset messages, to your address.
+- **Apple and Google as sign-in providers.** If you choose Sign in with Apple or Sign in with Google, that company confirms your identity to us and shares the details listed above. They will know that you signed in to Wizzy. Their handling of your data is described in their own privacy policies.
 - **Apple.** When Wizzy draws walking directions, it sends the start and end points of each route to Apple Maps. Apple's handling of that information is described in Apple's privacy policy. Apple also provides the App Store and iOS features such as location services.
 
 We may disclose information if required by law.
@@ -80,7 +83,7 @@ We may disclose information if required by law.
 ## How long we keep it
 
 - **Account data** is kept until you delete your account.
-- **When you delete your account** in the app (Profile → Delete account), your account, profile, visits and badges are deleted from our database straight away, and you are removed from your groups. Groups you created pass to another member, or are deleted if you were the only member. Copies may remain in our hosting provider's encrypted backups for a short period until those backups are overwritten.
+- **When you delete your account** in the app (Profile → Delete account), your account, profile, visits and badges are deleted from our database straight away, and you are removed from your groups. Groups you created pass to another member, or are deleted if you were the only member. If you signed in with Apple, we also ask Apple to disconnect Wizzy from your Apple ID. Copies may remain in our hosting provider's encrypted backups for a short period until those backups are overwritten.
 - **Technical logs** are kept for a limited period by our hosting provider and then deleted.
 - **Data on your phone** is removed when you delete the app.
 
