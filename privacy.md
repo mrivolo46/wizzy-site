@@ -83,7 +83,7 @@ We may disclose information if required by law.
 ## How long we keep it
 
 - **Account data** is kept until you delete your account.
-- **When you delete your account** in the app (Profile → Delete account), your account, profile, visits and badges are deleted from our database straight away, and you are removed from your groups. Groups you created pass to another member, or are deleted if you were the only member. If you signed in with Apple, we also ask Apple to disconnect Wizzy from your Apple ID. Copies may remain in our hosting provider's encrypted backups for a short period until those backups are overwritten.
+- **When you delete your account** in the app (Profile → Settings → Delete account), your account, profile, visits and badges are deleted from our database straight away, and you are removed from your groups. Groups you created pass to another member, or are deleted if you were the only member. If you signed in with Apple, we also ask Apple to disconnect Wizzy from your Apple ID. Copies may remain in our hosting provider's encrypted backups for a short period until those backups are overwritten.
 - **Technical logs** are kept for a limited period by our hosting provider and then deleted.
 - **Data on your phone** is removed when you delete the app.
 
