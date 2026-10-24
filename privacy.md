@@ -5,7 +5,7 @@ permalink: /privacy/
 
 # Wizzy Privacy Policy
 
-**Effective date:** 23 October 2026
+**Effective date:** 24 October 2026
 
 Wizzy is an iPhone app that tells you about the landmarks you walk past. This policy explains what information Wizzy uses, why, where it is kept, and the choices you have.
 
@@ -21,7 +21,7 @@ Wizzy is an iPhone app that tells you about the landmarks you walk past. This po
 
 Wizzy is published by **Marco Rivolo**, an individual based in Sweden, who is the data controller for the information described here.
 
-Contact: **[CONTACT EMAIL]**
+Contact: **[wizzy.appsupport@gmail.com](mailto:wizzy.appsupport@gmail.com)**
 
 ## What we collect and why
 
@@ -95,7 +95,7 @@ Under the GDPR you have the right to:
 - receive your data in a portable format;
 - withdraw consent you have given, such as location or photo access, at any time in iOS Settings.
 
-To use any of these rights, email **[CONTACT EMAIL]**. We will reply within one month.
+To use any of these rights, email **[wizzy.appsupport@gmail.com](mailto:wizzy.appsupport@gmail.com)**. We will reply within one month.
 
 If you think we have handled your data incorrectly, you can complain to the Swedish Authority for Privacy Protection (Integritetsskyddsmyndigheten, IMY) at [imy.se](https://www.imy.se), or to the data protection authority in your own country.
 
@@ -114,4 +114,4 @@ If we change this policy, we will update the effective date above. If the change
 ## Contact
 
 Marco Rivolo, Sweden
-**[CONTACT EMAIL]**
+**[wizzy.appsupport@gmail.com](mailto:wizzy.appsupport@gmail.com)**

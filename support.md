@@ -5,7 +5,7 @@ permalink: /support/
 
 # Wizzy Support
 
-Questions, problems or ideas? Email **[CONTACT EMAIL]** and I'll get back to you.
+Questions, problems or ideas? Email **[wizzy.appsupport@gmail.com](mailto:wizzy.appsupport@gmail.com)** and I'll get back to you.
 
 ## Common questions
 
