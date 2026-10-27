@@ -5,7 +5,7 @@ permalink: /privacy/
 
 # Wizzy Privacy Policy
 
-**Effective date:** 24 October 2026
+**Effective date:** 27 October 2026
 
 Wizzy is an iPhone app that tells you about the landmarks you walk past. This policy explains what information Wizzy uses, why, where it is kept, and the choices you have.
 
@@ -53,7 +53,7 @@ If you join a group, the other members of that group can see your display name, 
 
 Some information never leaves your device and is not sent to us:
 
-- **Your location.** Wizzy uses your location to show nearby landmarks, plan walks from where you are, and notify you when you pass a landmark. With "Pings" turned on and "Always" location allowed, iOS can wake Wizzy in the background to send those notifications. Your coordinates are processed on your phone only. You control this through the iOS location permission and can change it at any time in Settings.
+- **Your location.** Wizzy uses your location to show nearby landmarks, plan walks from where you are, and notify you when you pass a landmark. Wizzy only uses your location in the background during a walk you start yourself: with "Always" location allowed, iOS can then wake Wizzy to send those notifications while your phone is locked. When the walk ends (when you tap Stop, reach the last stop of a planned route, or after 8 hours at most), Wizzy stops using your location in the background. Your coordinates are processed on your phone only. You control this through the iOS location permission and can change it at any time in Settings.
 - **Your profile photo**, if you add one.
 - **Your walk journal**, planned walks and app settings.
 

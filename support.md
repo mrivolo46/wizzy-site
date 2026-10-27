@@ -11,10 +11,10 @@ Questions, problems or ideas? Email **[wizzy.appsupport@gmail.com](mailto:wizzy.
 
 ### I'm not getting pings when I walk past landmarks
 
-- Make sure **Pings** is turned on (the bell on the map, or Profile → Settings).
+- Pings only run during a walk. Tap **Start walk** on the map (or **Just walk** in the Walks tab) before you set off.
 - Allow notifications for Wizzy in the iPhone **Settings** app → Wizzy → Notifications.
 - For pings while your phone is locked, set location to **Always** in Settings → Wizzy → Location. With "While Using the App", pings only work while Wizzy is open.
-- Pings pause automatically after you've been away from all Wizzy cities for a day. Open Wizzy in a city to turn them back on.
+- A walk ends when you tap **Stop**, when you reach the last stop of a planned route, or after 8 hours. Start a new walk to get pings again.
 
 ### My city isn't in Wizzy
 
@@ -26,7 +26,7 @@ Open the invite link your friend sent, or go to Profile → Groups → Join and 
 
 ### I forgot my password
 
-On the sign-in screen, tap **Forgot password** and follow the link in the email. Check your spam folder if it doesn't arrive.
+On the sign-in screen, tap **Continue with email**, then **Forgot password?**, and follow the link in the email. Check your spam folder if it doesn't arrive.
 
 ### How do I delete my account?
 
