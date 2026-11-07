@@ -5,7 +5,7 @@ permalink: /privacy/
 
 # Wizzy Privacy Policy
 
-**Effective date:** 27 October 2026
+**Effective date:** 7 November 2026
 
 Wizzy is an iPhone app that tells you about the landmarks you walk past. This policy explains what information Wizzy uses, why, where it is kept, and the choices you have.
 
@@ -13,7 +13,7 @@ Wizzy is an iPhone app that tells you about the landmarks you walk past. This po
 
 - Your location stays on your phone. Wizzy never uploads your coordinates; when you have an account, it only saves *which landmark* you visited.
 - You can use the map, stories and walks without an account.
-- If you create an account (with your email, Sign in with Apple or Sign in with Google), we store your email, the name you choose, your interests, the landmarks you visited, your badges and your groups. That data is stored in Stockholm, Sweden.
+- If you create an account (with your email, Sign in with Apple or Sign in with Google), we store your email, the name you choose, your interests, the landmarks you visited, your badges (the city stamps in your passport) and your groups. That data is stored in Stockholm, Sweden.
 - No ads, no tracking, no analytics, and we never sell your data.
 - You can delete your account and its data at any time from inside the app.
 
@@ -40,7 +40,7 @@ When you sign up and use Wizzy while signed in, we store the following on our se
 | If you use Sign in with Google: your email address, your name and profile picture link as provided by Google, and a Google account identifier. | To create your account and sign you in. |
 | Display name and interests | To personalise walks and to show your name to people in your groups. |
 | Landmarks you visited (which landmark, when, and whether you were pinged or marked it yourself) | To keep your progress and badges across devices. |
-| Badges you earned | To show your achievements. |
+| Badges you earned (shown as city stamps in your passport) | To show your progress in your passport. |
 | Groups you create or join (group name, city, invite code, members, and an optional iCloud Shared Album link) | To let you plan walks with friends. |
 
 The legal basis for this is that it is necessary to provide the service you asked for (GDPR Article 6(1)(b)).
@@ -83,7 +83,7 @@ We may disclose information if required by law.
 ## How long we keep it
 
 - **Account data** is kept until you delete your account.
-- **When you delete your account** in the app (Profile → Settings → Delete account), your account, profile, visits and badges are deleted from our database straight away, and you are removed from your groups. Groups you created pass to another member, or are deleted if you were the only member. If you signed in with Apple, we also ask Apple to disconnect Wizzy from your Apple ID. Copies may remain in our hosting provider's encrypted backups for a short period until those backups are overwritten.
+- **When you delete your account** in the app (Profile → Settings & privacy → Delete account), your account, profile, visits and badges are deleted from our database straight away, and you are removed from your groups. Groups you created pass to another member, or are deleted if you were the only member. If you signed in with Apple, we also ask Apple to disconnect Wizzy from your Apple ID. Copies may remain in our hosting provider's encrypted backups for a short period until those backups are overwritten.
 - **Technical logs** are kept for a limited period by our hosting provider and then deleted.
 - **Data on your phone** is removed when you delete the app.
 

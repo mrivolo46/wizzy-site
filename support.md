@@ -30,7 +30,7 @@ On the sign-in screen, tap **Continue with email**, then **Forgot password?**, a
 
 ### How do I delete my account?
 
-In the app, go to **Profile → Settings → Delete account**. This permanently deletes your account, visits and badges. Groups you created pass to another member. See the [Privacy Policy](../privacy/) for details.
+In the app, go to **Profile → Settings & privacy → Delete account**. This permanently deletes your account, visits and badges (your passport stamps). Groups you created pass to another member. See the [Privacy Policy](../privacy/) for details.
 
 ### Does Wizzy track me?
 

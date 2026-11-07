@@ -18,7 +18,7 @@ Wizzy is an iPhone app with short stories about the landmarks around you, and a 
   <img src="{{ '/assets/screens/story.jpg' | relative_url }}" alt="A short story about a landmark">
   <img src="{{ '/assets/screens/route.jpg' | relative_url }}" alt="A planned walking route">
   <img src="{{ '/assets/screens/walks.jpg' | relative_url }}" alt="Your walk journal">
-  <img src="{{ '/assets/screens/badges.jpg' | relative_url }}" alt="Badges for the cities you complete">
+  <img src="{{ '/assets/screens/passport.jpg' | relative_url }}" alt="Your passport, with a stamp for each city">
 </div>
 
 ## What it does
@@ -27,6 +27,7 @@ Wizzy is an iPhone app with short stories about the landmarks around you, and a 
 - **Stories, not encyclopedia entries.** Every place gets a short story you can read in the time it takes to cross the street.
 - **Plan a route or just wander.** Build a walk from the map, or start walking and let the city surprise you.
 - **Keep a journal.** Every walk is saved as a day with a map of where you went.
+- **Fill your passport.** Each city you explore gets a stamp that fills in as you see its landmarks.
 - **Travel together.** Make a group, invite friends with a link, see how much of the city each of you has seen, and share a trip album.
 - **Private by design.** Your location stays on your phone. No ads, no analytics.
 
