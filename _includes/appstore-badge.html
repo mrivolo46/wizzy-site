@@ -2,7 +2,17 @@
 App Store badge. Pass ct="web-<page>" so App Store Connect (Analytics → Acquisition → Campaigns)
 shows which page brought each download. Campaign links need site.appstore_pt (the provider token
 from App Store Connect → Analytics → Campaigns); without it the link is a plain App Store link.
+Pass tone="white" on dark backgrounds; otherwise the badge follows light and dark mode.
 {%- endcomment -%}
-<a class="wz-badge" href="https://apps.apple.com/app/apple-store/id{{ site.appstore_id }}{% if site.appstore_pt and site.appstore_pt != '' %}?pt={{ site.appstore_pt }}&amp;ct={{ include.ct | default: 'web' }}&amp;mt=8{% endif %}">
-  <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store">
+{%- assign black = "https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" -%}
+{%- assign white = "https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/white/en-us" -%}
+<a class="badge" href="https://apps.apple.com/app/apple-store/id{{ site.appstore_id }}{% if site.appstore_pt and site.appstore_pt != '' %}?pt={{ site.appstore_pt }}&amp;ct={{ include.ct | default: 'web' }}&amp;mt=8{% endif %}">
+  {%- if include.tone == "white" %}
+  <img src="{{ white }}" alt="Download on the App Store">
+  {%- else %}
+  <picture>
+    <source srcset="{{ white }}" media="(prefers-color-scheme: dark)">
+    <img src="{{ black }}" alt="Download on the App Store">
+  </picture>
+  {%- endif %}
 </a>

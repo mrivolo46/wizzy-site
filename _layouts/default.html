@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/wizzy.css' | relative_url }}">
+  {% include head-custom.html %}
+</head>
+<body>
+{%- unless page.cover %}
+  <div class="wrap">{% include site-header.html %}</div>
+{%- endunless %}
+{{ content }}
+  <div class="wrap">
+    <footer class="site-footer">
+      <span>Wizzy, for iPhone</span>
+      <nav>
+        <a href="{{ '/support/' | relative_url }}">Support</a>
+        <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
+        <a href="{{ '/cities/' | relative_url }}">All cities</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>

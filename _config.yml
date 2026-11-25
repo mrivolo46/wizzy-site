@@ -8,5 +8,10 @@ appstore_pt: ""
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
 exclude:
   - scripts

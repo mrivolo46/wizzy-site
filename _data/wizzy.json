@@ -378,282 +378,338 @@
   {
    "id": "amsterdam",
    "name": "Amsterdam",
-   "country": "Netherlands"
+   "country": "Netherlands",
+   "count": 50
   },
   {
    "id": "athens",
    "name": "Athens",
-   "country": "Greece"
+   "country": "Greece",
+   "count": 50
   },
   {
    "id": "barcelona",
    "name": "Barcelona",
-   "country": "Spain"
+   "country": "Spain",
+   "count": 50
   },
   {
    "id": "berlin",
    "name": "Berlin",
-   "country": "Germany"
+   "country": "Germany",
+   "count": 50
   },
   {
    "id": "bilbao",
    "name": "Bilbao",
-   "country": "Spain"
+   "country": "Spain",
+   "count": 42
   },
   {
    "id": "bologna",
    "name": "Bologna",
-   "country": "Italy"
+   "country": "Italy",
+   "count": 43
   },
   {
    "id": "bordeaux",
    "name": "Bordeaux",
-   "country": "France"
+   "country": "France",
+   "count": 48
   },
   {
    "id": "bratislava",
    "name": "Bratislava",
-   "country": "Slovakia"
+   "country": "Slovakia",
+   "count": 39
   },
   {
    "id": "brussels",
    "name": "Brussels",
-   "country": "Belgium"
+   "country": "Belgium",
+   "count": 50
   },
   {
    "id": "bucharest",
    "name": "Bucharest",
-   "country": "Romania"
+   "country": "Romania",
+   "count": 50
   },
   {
    "id": "budapest",
    "name": "Budapest",
-   "country": "Hungary"
+   "country": "Hungary",
+   "count": 50
   },
   {
    "id": "cologne",
    "name": "Cologne",
-   "country": "Germany"
+   "country": "Germany",
+   "count": 50
   },
   {
    "id": "copenhagen",
    "name": "Copenhagen",
-   "country": "Denmark"
+   "country": "Denmark",
+   "count": 50
   },
   {
    "id": "dresden",
    "name": "Dresden",
-   "country": "Germany"
+   "country": "Germany",
+   "count": 47
   },
   {
    "id": "dublin",
    "name": "Dublin",
-   "country": "Ireland"
+   "country": "Ireland",
+   "count": 50
   },
   {
    "id": "florence",
    "name": "Florence",
-   "country": "Italy"
+   "country": "Italy",
+   "count": 50
   },
   {
    "id": "frankfurt",
    "name": "Frankfurt",
-   "country": "Germany"
+   "country": "Germany",
+   "count": 50
   },
   {
    "id": "granada",
    "name": "Granada",
-   "country": "Spain"
+   "country": "Spain",
+   "count": 42
   },
   {
    "id": "hamburg",
    "name": "Hamburg",
-   "country": "Germany"
+   "country": "Germany",
+   "count": 50
   },
   {
    "id": "helsinki",
    "name": "Helsinki",
-   "country": "Finland"
+   "country": "Finland",
+   "count": 50
   },
   {
    "id": "leipzig",
    "name": "Leipzig",
-   "country": "Germany"
+   "country": "Germany",
+   "count": 46
   },
   {
    "id": "lisbon",
    "name": "Lisbon",
-   "country": "Portugal"
+   "country": "Portugal",
+   "count": 50
   },
   {
    "id": "ljubljana",
    "name": "Ljubljana",
-   "country": "Slovenia"
+   "country": "Slovenia",
+   "count": 39
   },
   {
    "id": "london",
    "name": "London",
-   "country": "United Kingdom"
+   "country": "United Kingdom",
+   "count": 50
   },
   {
    "id": "luxembourg",
    "name": "Luxembourg City",
-   "country": "Luxembourg"
+   "country": "Luxembourg",
+   "count": 40
   },
   {
    "id": "lyon",
    "name": "Lyon",
-   "country": "France"
+   "country": "France",
+   "count": 50
   },
   {
    "id": "luderitz",
    "name": "Lüderitz",
-   "country": "Namibia"
+   "country": "Namibia",
+   "count": 18
   },
   {
    "id": "madrid",
    "name": "Madrid",
-   "country": "Spain"
+   "country": "Spain",
+   "count": 50
   },
   {
    "id": "marseille",
    "name": "Marseille",
-   "country": "France"
+   "country": "France",
+   "count": 50
   },
   {
    "id": "milan",
    "name": "Milan",
-   "country": "Italy"
+   "country": "Italy",
+   "count": 50
   },
   {
    "id": "munich",
    "name": "Munich",
-   "country": "Germany"
+   "country": "Germany",
+   "count": 50
   },
   {
    "id": "malaga",
    "name": "Málaga",
-   "country": "Spain"
+   "country": "Spain",
+   "count": 36
   },
   {
    "id": "naples",
    "name": "Naples",
-   "country": "Italy"
+   "country": "Italy",
+   "count": 50
   },
   {
    "id": "nice",
    "name": "Nice",
-   "country": "France"
+   "country": "France",
+   "count": 41
   },
   {
    "id": "nicosia",
    "name": "Nicosia",
-   "country": "Cyprus"
+   "country": "Cyprus",
+   "count": 37
   },
   {
    "id": "paris",
    "name": "Paris",
-   "country": "France"
+   "country": "France",
+   "count": 50
   },
   {
    "id": "prague",
    "name": "Prague",
-   "country": "Czechia"
+   "country": "Czechia",
+   "count": 50
   },
   {
    "id": "riga",
    "name": "Riga",
-   "country": "Latvia"
+   "country": "Latvia",
+   "count": 49
   },
   {
    "id": "rome",
    "name": "Rome",
-   "country": "Italy"
+   "country": "Italy",
+   "count": 50
   },
   {
    "id": "seville",
    "name": "Seville",
-   "country": "Spain"
+   "country": "Spain",
+   "count": 50
   },
   {
    "id": "sofia",
    "name": "Sofia",
-   "country": "Bulgaria"
+   "country": "Bulgaria",
+   "count": 49
   },
   {
    "id": "stockholm",
    "name": "Stockholm",
-   "country": "Sweden"
+   "country": "Sweden",
+   "count": 60
   },
   {
    "id": "strasbourg",
    "name": "Strasbourg",
-   "country": "France"
+   "country": "France",
+   "count": 42
   },
   {
    "id": "swakopmund",
    "name": "Swakopmund",
-   "country": "Namibia"
+   "country": "Namibia",
+   "count": 32
   },
   {
    "id": "tallinn",
    "name": "Tallinn",
-   "country": "Estonia"
+   "country": "Estonia",
+   "count": 50
   },
   {
    "id": "toulouse",
    "name": "Toulouse",
-   "country": "France"
+   "country": "France",
+   "count": 47
   },
   {
    "id": "turin",
    "name": "Turin",
-   "country": "Italy"
+   "country": "Italy",
+   "count": 50
   },
   {
    "id": "valencia",
    "name": "Valencia",
-   "country": "Spain"
+   "country": "Spain",
+   "count": 50
   },
   {
    "id": "valletta",
    "name": "Valletta",
-   "country": "Malta"
+   "country": "Malta",
+   "count": 36
   },
   {
    "id": "venice",
    "name": "Venice",
-   "country": "Italy"
+   "country": "Italy",
+   "count": 50
   },
   {
    "id": "vienna",
    "name": "Vienna",
-   "country": "Austria"
+   "country": "Austria",
+   "count": 50
   },
   {
    "id": "vilnius",
    "name": "Vilnius",
-   "country": "Lithuania"
+   "country": "Lithuania",
+   "count": 49
   },
   {
    "id": "walvis-bay",
    "name": "Walvis Bay",
-   "country": "Namibia"
+   "country": "Namibia",
+   "count": 19
   },
   {
    "id": "warsaw",
    "name": "Warsaw",
-   "country": "Poland"
+   "country": "Poland",
+   "count": 50
   },
   {
    "id": "windhoek",
    "name": "Windhoek",
-   "country": "Namibia"
+   "country": "Namibia",
+   "count": 34
   },
   {
    "id": "zagreb",
    "name": "Zagreb",
-   "country": "Croatia"
+   "country": "Croatia",
+   "count": 50
   }
  ]
 }

@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Cities in Wizzy"
+description: "Every city in Wizzy, with the stories behind its landmarks."
+permalink: /cities/
+---
+{%- assign w = site.data.wizzy -%}
+<main class="wrap page">
+  <section class="section-intro" style="padding-top: 24px;">
+    <p class="eyebrow">{{ w.countries | size }} countries</p>
+    <h1 class="display" style="font-size: clamp(40px, 6vw, 72px);">{{ w.city_count }} cities, {{ w.landmark_count_text }} places</h1>
+    <p class="sub">Pick a city to see its must-sees. Every story, and the pings as you walk, are in the app.</p>
+    <div class="cta-row">{% include appstore-badge.html ct="web-cities" %}</div>
+  </section>
+  <div style="padding-top: 32px;">
+  {%- for country in w.countries %}
+    <section class="country">
+      <h2>{{ country.name }}</h2>
+      <div class="chips">
+        {%- for c in country.cities %}
+        <a class="chip" href="{{ '/cities/' | append: c.id | append: '/' | relative_url }}">{{ c.name }}</a>
+        {%- endfor %}
+      </div>
+    </section>
+  {%- endfor %}
+  </div>
+</main>

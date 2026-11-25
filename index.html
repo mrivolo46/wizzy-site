@@ -1,0 +1,107 @@
+---
+layout: default
+title: Wizzy
+description: "Just walk. Wizzy taps you on the shoulder when you pass something worth looking up at, with short stories about the landmarks around you, for iPhone."
+featured: [rome, paris, london, barcelona, lisbon, amsterdam, prague, vienna]
+---
+{%- assign w = site.data.wizzy -%}
+<main>
+<section class="wrap hero">
+  <div class="hero-text">
+    <p class="eyebrow">A pocket guide for walking a city</p>
+    <h1 class="display">Just walk.</h1>
+    <p class="lede">Wizzy taps you on the shoulder when you pass something worth looking up at, and tells you its story in the time it takes to cross the street.</p>
+    <div class="cta-row">
+      {% include appstore-badge.html ct="web-home" %}
+      <span class="cta-note">iPhone · {{ w.city_count }} cities · {{ w.landmark_count_text }} places<br>No ads, no tracking</span>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="hero-phone">
+      <img src="{{ '/assets/screens/map.jpg' | relative_url }}" alt="Wizzy's map of Rome, with landmarks pinned around you">
+    </div>
+    <div class="ping" aria-label="Example Wizzy notification">
+      <img src="{{ '/assets/icon.png' | relative_url }}" alt="">
+      <div>
+        <div class="ping-top"><span>Wizzy</span><span>now</span></div>
+        <strong>Pantheon</strong>
+        <p>Hadrian’s temple, with the largest unreinforced concrete dome ever built.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps-band">
+  <ol class="wrap steps">
+    <li><span class="num">01</span><h3>Start a walk</h3><p>Tap Start walk and head out, or pick a ready-made walk for the afternoon.</p></li>
+    <li><span class="num">02</span><h3>Put your phone away</h3><p>No tour to follow, no audio to keep up with. Wizzy keeps going with the screen locked.</p></li>
+    <li><span class="num">03</span><h3>Look up when it pings</h3><p>You pass a place, you get a ping. Open it for the story, or keep walking.</p></li>
+  </ol>
+</section>
+
+<section class="wrap split">
+  <div class="split-text">
+    <h2 class="h2">A story, not an encyclopedia entry.</h2>
+    <p class="sub">Every place gets a few lines worth reading on the pavement, and something to look for when you get there.</p>
+    <article class="story-card">
+      <span class="label">Rome · Architecture · 126</span>
+      <h3>Pantheon</h3>
+      <p class="snippet">Hadrian’s temple, with the largest unreinforced concrete dome ever built.</p>
+      <p class="story">The inscription names Agrippa, but the standing building is Hadrian’s, around 126 CE. It became a church in 609, which is why it survived.</p>
+      <div class="look"><span class="label">Look for</span><p>Look up at the oculus, open to the sky, then down: small holes in the floor drain the rain that falls through it.</p></div>
+    </article>
+  </div>
+  <div class="split-art">
+    <img src="{{ '/assets/screens/story.jpg' | relative_url }}" alt="The Pantheon's story in Wizzy">
+  </div>
+</section>
+
+<section class="features-band">
+  <div class="wrap features">
+    <h2 class="h2">Wander, or plan it. Either way it’s saved.</h2>
+    <div class="feature-grid">
+      <figure>
+        <img src="{{ '/assets/screens/route.jpg' | relative_url }}" alt="A planned walking route in Wizzy">
+        <figcaption><b>Routes from 45 minutes to 3 hours,</b> built around what you like.</figcaption>
+      </figure>
+      <figure>
+        <img src="{{ '/assets/screens/walks.jpg' | relative_url }}" alt="The Walks tab in Wizzy">
+        <figcaption><b>Every walk becomes a day</b> in your journal, with a map of where you went.</figcaption>
+      </figure>
+      <figure>
+        <img src="{{ '/assets/screens/passport.jpg' | relative_url }}" alt="The passport in Wizzy, with a stamp for each city">
+        <figcaption><b>A stamp for every city,</b> filling in as you see its landmarks.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="wrap cities" id="cities">
+  <div class="section-head">
+    <h2 class="h2">{{ w.city_count }} cities, {{ w.landmark_count_text }} places</h2>
+    <a class="more-link" href="{{ '/cities/' | relative_url }}">See every city →</a>
+  </div>
+  <div class="city-grid">
+    {%- for id in page.featured %}
+    {%- assign c = w.cities | where: "id", id | first %}
+    {%- if c %}
+    <a class="city-tile" href="{{ '/cities/' | append: c.id | append: '/' | relative_url }}">
+      <strong>{{ c.name }}</strong>
+      <span>{{ c.country }}</span>
+      <em>{{ c.count }} places</em>
+    </a>
+    {%- endif %}
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap band-inner">
+    <div>
+      <h2 class="h2">Your location stays on your phone.</h2>
+      <p class="sub">Wizzy only follows you during a walk you start, and stops when it ends. No ads, no analytics, and you don’t need an account.</p>
+    </div>
+    {% include appstore-badge.html ct="web-home" tone="white" %}
+  </div>
+</section>
+</main>
