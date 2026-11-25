@@ -1,0 +1,234 @@
+#!/usr/bin/env python3
+"""Build one web page per Wizzy city, plus the cities index data.
+
+Only cities that are in the App Store build go on the site, so pass the git
+ref of the build that is live (or in review) in the app repo:
+
+    python3 scripts/build_city_pages.py --app ../Wizzy --ref 7d9e4ee
+
+The city list comes from that ref. The text comes from the app repo's working
+copy, so fact fixes made after the build still reach the site. Landmarks added
+after the build are left out.
+
+Writes:
+    cities/<id>.html      one page per city (regenerated each run)
+    _data/wizzy.json      city list and totals, used by index.md and cities.md
+"""
+
+import argparse
+import html
+import json
+import re
+import subprocess
+from collections import defaultdict
+from pathlib import Path
+
+SITE = Path(__file__).resolve().parent.parent
+RES = "Wizzy/Data/Resources"
+
+CATEGORY_LABELS = {
+    "architecture": "Buildings",
+    "bridge": "Bridges",
+    "church": "Churches",
+    "commerce": "Shops and arcades",
+    "culture": "Culture",
+    "entertainment": "Theatres and venues",
+    "fortress": "Forts and walls",
+    "government": "Civic buildings",
+    "hotel": "Hotels",
+    "landmark": "Landmarks",
+    "market": "Markets",
+    "museum": "Museums",
+    "neighbourhood": "Neighbourhoods",
+    "palace": "Palaces",
+    "park": "Parks and gardens",
+    "square": "Squares",
+    "transport": "Stations",
+    "viewpoint": "Viewpoints",
+    "waterfront": "Waterfront",
+}
+
+CATEGORY_SINGULAR = {
+    "architecture": "Building", "bridge": "Bridge", "church": "Church",
+    "commerce": "Shopping", "culture": "Culture", "entertainment": "Venue",
+    "fortress": "Fortress", "government": "Civic building", "hotel": "Hotel",
+    "landmark": "Landmark", "market": "Market", "museum": "Museum",
+    "neighbourhood": "Neighbourhood", "palace": "Palace", "park": "Park",
+    "square": "Square", "transport": "Station", "viewpoint": "Viewpoint",
+    "waterfront": "Waterfront",
+}
+
+e = html.escape
+
+
+def git(app, *args):
+    return subprocess.run(["git", "-C", str(app), *args], check=True,
+                          capture_output=True, text=True).stdout
+
+
+def shipped(app, ref):
+    """Landmark file names and landmark ids in the given build."""
+    cities, landmarks = [], set()
+    for name in git(app, "ls-tree", "--name-only", ref, RES + "/").split():
+        if not name.endswith("_landmarks.json"):
+            continue
+        data = json.loads(git(app, "show", f"{ref}:{name}"))
+        cities.append(name.rsplit("/", 1)[-1])
+        landmarks.update(l["id"] for l in data["landmarks"])
+    return cities, landmarks
+
+
+def ct(city_id):
+    # App Store campaign tokens are at most 40 characters.
+    return ("web-" + city_id)[:40]
+
+
+def ping_card(l):
+    return f"""<div class="wz-ping" aria-label="Example Wizzy notification">
+  <img src="{{{{ '/assets/icon.png' | relative_url }}}}" alt="">
+  <div><div class="wz-ping-top"><span>WIZZY</span><span>now</span></div>
+  <strong>{e(l['name'])}</strong>
+  <p>{e(l['snippet'])}</p></div>
+</div>"""
+
+
+def must_see(l):
+    look = next((x["text"] for x in l.get("extras", []) if x["kind"] == "look"), None)
+    built = l.get("builtYear")
+    meta = CATEGORY_SINGULAR.get(l["category"], l["category"].title())
+    if built:
+        year = f"{-built} BCE" if built < 0 else f"{built} CE" if built < 1000 else str(built)
+        meta += f" · {year}"
+    out = f"""<li class="wz-place">
+  <h3>{e(l['name'])}</h3>
+  <p class="wz-meta">{e(meta)}</p>
+  <p>{e(l['story'])}</p>"""
+    if look:
+        out += f'\n  <p class="wz-look"><b>Look for:</b> {e(look)}</p>'
+    return out + "\n</li>"
+
+
+def json_ld(city, places, url):
+    items = [{
+        "@type": "ListItem", "position": i + 1,
+        "item": {"@type": "TouristAttraction", "name": l["name"],
+                 "description": l["snippet"],
+                 "geo": {"@type": "GeoCoordinates",
+                         "latitude": l["latitude"], "longitude": l["longitude"]}},
+    } for i, l in enumerate(places)]
+    data = {"@context": "https://schema.org", "@type": "ItemList",
+            "name": f"Landmarks in {city['name']}", "url": url,
+            "itemListElement": items}
+    return json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
+
+
+def page(city, landmarks, neighbours, site_url):
+    n = len(landmarks)
+    top = sorted([l for l in landmarks if l["importance"] == 3], key=lambda l: l["name"])
+    first = min(top or landmarks, key=lambda l: len(l["snippet"]))
+    rest = defaultdict(list)
+    for l in landmarks:
+        if l["importance"] < 3:
+            rest[l["category"]].append(l["name"])
+    url = f"{site_url}/cities/{city['id']}/"
+    desc = (f"{n} places in {city['name']}, {city['country']}, each with a short story. "
+            f"Start a walk and Wizzy taps you on the shoulder when you pass one.")
+
+    out = [f"""---
+layout: default
+title: "Walking {city['name']}: the stories behind {n} places"
+description: "{desc}"
+permalink: /cities/{city['id']}/
+---
+<!-- Generated by scripts/build_city_pages.py. Edit the script, not this file. -->
+<script type="application/ld+json">{json_ld(city, top, url)}</script>
+
+<p class="wz-crumbs"><a href="{{{{ '/' | relative_url }}}}">Wizzy</a> › <a href="{{{{ '/cities/' | relative_url }}}}">Cities</a> › {e(city['country'])}</p>
+<h1>{e(city['name'])} on foot</h1>
+<p class="wz-lede">Wizzy knows {n} places in {e(city['name'])}, from the big sights to the corners most people walk straight past. Start a walk, put your phone away, and Wizzy taps you on the shoulder when there's something worth looking up at.</p>
+
+{ping_card(first)}
+
+<p class="wz-cta">{{% include appstore-badge.html ct="{ct(city['id'])}" %}}</p>
+"""]
+    if top:
+        out.append(f"<h2>The must-sees</h2>\n<ul class=\"wz-places\">\n"
+                   + "\n".join(must_see(l) for l in top) + "\n</ul>\n")
+    if rest:
+        out.append(f"<h2>And {sum(len(v) for v in rest.values())} more in the app</h2>\n"
+                   "<p>Each one has its own short story, and things to look for when you get there.</p>\n"
+                   "<dl class=\"wz-more\">\n")
+        for cat in sorted(rest, key=lambda c: (-len(rest[c]), CATEGORY_LABELS.get(c, c))):
+            names = sorted(rest[cat])
+            out.append(f"  <dt>{e(CATEGORY_LABELS.get(cat, cat.title()))}</dt>"
+                       f"<dd>{e(', '.join(names))}</dd>\n")
+        out.append("</dl>\n")
+    out.append(f"""
+<h2>How it works</h2>
+<ol>
+  <li>Open Wizzy in {e(city['name'])} and tap <b>Start walk</b>, or pick a ready-made walk.</li>
+  <li>Put your phone in your pocket. Wizzy runs in the background, even with the screen locked.</li>
+  <li>When you pass a place, you get a ping. Open it for the story, or keep walking.</li>
+</ol>
+<p>Every place you see gets stamped in your {e(city['name'])} passport. Your location stays on your phone. No ads, no tracking.</p>
+
+<p class="wz-cta">{{% include appstore-badge.html ct="{ct(city['id'])}" %}}</p>
+""")
+    if neighbours:
+        links = " · ".join(f'<a href="{{{{ \'/cities/{c["id"]}/\' | relative_url }}}}">{e(c["name"])}</a>'
+                           for c in neighbours)
+        out.append(f"<p><b>Also in {e(city['country'])}:</b> {links}</p>\n")
+    out.append("<p><a href=\"{{ '/cities/' | relative_url }}\">All cities</a></p>\n")
+    return "".join(out)
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--app", default=str(SITE.parent / "Wizzy"), help="path to the Wizzy app repo")
+    ap.add_argument("--ref", required=True, help="git ref of the App Store build")
+    ap.add_argument("--url", default="https://mrivolo46.github.io/wizzy-site")
+    args = ap.parse_args()
+    app = Path(args.app)
+
+    files, landmark_ids = shipped(app, args.ref)
+    cities = []
+    for name in files:
+        path = app / RES / name
+        data = json.loads(path.read_text())
+        lms = [l for l in data["landmarks"] if l["id"] in landmark_ids]
+        cities.append((data["city"], lms))
+
+    by_country = defaultdict(list)
+    for c, _ in cities:
+        by_country[c["country"]].append(c)
+
+    out_dir = SITE / "cities"
+    out_dir.mkdir(exist_ok=True)
+    for old in out_dir.glob("*.html"):
+        old.unlink()
+    for c, lms in cities:
+        neighbours = sorted((x for x in by_country[c["country"]] if x["id"] != c["id"]),
+                            key=lambda x: x["name"])
+        (out_dir / f"{c['id']}.html").write_text(page(c, lms, neighbours, args.url))
+
+    summary = {
+        "ref": args.ref,
+        "city_count": len(cities),
+        "landmark_count": sum(len(l) for _, l in cities),
+        "landmark_count_text": f"{sum(len(l) for _, l in cities):,}",
+        "countries": [
+            {"name": country,
+             "cities": [{"id": c["id"], "name": c["name"]}
+                        for c in sorted(cs, key=lambda c: c["name"])]}
+            for country, cs in sorted(by_country.items())
+        ],
+        "cities": [{"id": c["id"], "name": c["name"], "country": c["country"]}
+                   for c, _ in sorted(cities, key=lambda x: x[0]["name"])],
+    }
+    (SITE / "_data").mkdir(exist_ok=True)
+    (SITE / "_data" / "wizzy.json").write_text(json.dumps(summary, ensure_ascii=False, indent=1) + "\n")
+    print(f"{len(cities)} cities, {summary['landmark_count']} landmarks, from {args.ref}")
+
+
+if __name__ == "__main__":
+    main()

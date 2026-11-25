@@ -1,0 +1,8 @@
+{%- comment -%}
+App Store badge. Pass ct="web-<page>" so App Store Connect (Analytics → Acquisition → Campaigns)
+shows which page brought each download. Campaign links need site.appstore_pt (the provider token
+from App Store Connect → Analytics → Campaigns); without it the link is a plain App Store link.
+{%- endcomment -%}
+<a class="wz-badge" href="https://apps.apple.com/app/apple-store/id{{ site.appstore_id }}{% if site.appstore_pt and site.appstore_pt != '' %}?pt={{ site.appstore_pt }}&amp;ct={{ include.ct | default: 'web' }}&amp;mt=8{% endif %}">
+  <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store">
+</a>

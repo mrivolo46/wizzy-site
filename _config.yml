@@ -1,2 +1,12 @@
 title: Wizzy
 description: Just walk. Wizzy tells you what you're passing. Short stories about the landmarks around you in 56 cities, for iPhone.
+url: https://mrivolo46.github.io
+baseurl: /wizzy-site
+appstore_id: "6827305807"
+# Provider token for App Store campaign links (App Store Connect → Analytics → Campaigns → Generate).
+appstore_pt: ""
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+exclude:
+  - scripts

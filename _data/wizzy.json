@@ -1,0 +1,659 @@
+{
+ "ref": "7d9e4ee",
+ "city_count": 56,
+ "landmark_count": 2585,
+ "landmark_count_text": "2,585",
+ "countries": [
+  {
+   "name": "Austria",
+   "cities": [
+    {
+     "id": "vienna",
+     "name": "Vienna"
+    }
+   ]
+  },
+  {
+   "name": "Belgium",
+   "cities": [
+    {
+     "id": "brussels",
+     "name": "Brussels"
+    }
+   ]
+  },
+  {
+   "name": "Bulgaria",
+   "cities": [
+    {
+     "id": "sofia",
+     "name": "Sofia"
+    }
+   ]
+  },
+  {
+   "name": "Croatia",
+   "cities": [
+    {
+     "id": "zagreb",
+     "name": "Zagreb"
+    }
+   ]
+  },
+  {
+   "name": "Cyprus",
+   "cities": [
+    {
+     "id": "nicosia",
+     "name": "Nicosia"
+    }
+   ]
+  },
+  {
+   "name": "Czechia",
+   "cities": [
+    {
+     "id": "prague",
+     "name": "Prague"
+    }
+   ]
+  },
+  {
+   "name": "Denmark",
+   "cities": [
+    {
+     "id": "copenhagen",
+     "name": "Copenhagen"
+    }
+   ]
+  },
+  {
+   "name": "Estonia",
+   "cities": [
+    {
+     "id": "tallinn",
+     "name": "Tallinn"
+    }
+   ]
+  },
+  {
+   "name": "Finland",
+   "cities": [
+    {
+     "id": "helsinki",
+     "name": "Helsinki"
+    }
+   ]
+  },
+  {
+   "name": "France",
+   "cities": [
+    {
+     "id": "bordeaux",
+     "name": "Bordeaux"
+    },
+    {
+     "id": "lyon",
+     "name": "Lyon"
+    },
+    {
+     "id": "marseille",
+     "name": "Marseille"
+    },
+    {
+     "id": "nice",
+     "name": "Nice"
+    },
+    {
+     "id": "paris",
+     "name": "Paris"
+    },
+    {
+     "id": "strasbourg",
+     "name": "Strasbourg"
+    },
+    {
+     "id": "toulouse",
+     "name": "Toulouse"
+    }
+   ]
+  },
+  {
+   "name": "Germany",
+   "cities": [
+    {
+     "id": "berlin",
+     "name": "Berlin"
+    },
+    {
+     "id": "cologne",
+     "name": "Cologne"
+    },
+    {
+     "id": "dresden",
+     "name": "Dresden"
+    },
+    {
+     "id": "frankfurt",
+     "name": "Frankfurt"
+    },
+    {
+     "id": "hamburg",
+     "name": "Hamburg"
+    },
+    {
+     "id": "leipzig",
+     "name": "Leipzig"
+    },
+    {
+     "id": "munich",
+     "name": "Munich"
+    }
+   ]
+  },
+  {
+   "name": "Greece",
+   "cities": [
+    {
+     "id": "athens",
+     "name": "Athens"
+    }
+   ]
+  },
+  {
+   "name": "Hungary",
+   "cities": [
+    {
+     "id": "budapest",
+     "name": "Budapest"
+    }
+   ]
+  },
+  {
+   "name": "Ireland",
+   "cities": [
+    {
+     "id": "dublin",
+     "name": "Dublin"
+    }
+   ]
+  },
+  {
+   "name": "Italy",
+   "cities": [
+    {
+     "id": "bologna",
+     "name": "Bologna"
+    },
+    {
+     "id": "florence",
+     "name": "Florence"
+    },
+    {
+     "id": "milan",
+     "name": "Milan"
+    },
+    {
+     "id": "naples",
+     "name": "Naples"
+    },
+    {
+     "id": "rome",
+     "name": "Rome"
+    },
+    {
+     "id": "turin",
+     "name": "Turin"
+    },
+    {
+     "id": "venice",
+     "name": "Venice"
+    }
+   ]
+  },
+  {
+   "name": "Latvia",
+   "cities": [
+    {
+     "id": "riga",
+     "name": "Riga"
+    }
+   ]
+  },
+  {
+   "name": "Lithuania",
+   "cities": [
+    {
+     "id": "vilnius",
+     "name": "Vilnius"
+    }
+   ]
+  },
+  {
+   "name": "Luxembourg",
+   "cities": [
+    {
+     "id": "luxembourg",
+     "name": "Luxembourg City"
+    }
+   ]
+  },
+  {
+   "name": "Malta",
+   "cities": [
+    {
+     "id": "valletta",
+     "name": "Valletta"
+    }
+   ]
+  },
+  {
+   "name": "Namibia",
+   "cities": [
+    {
+     "id": "luderitz",
+     "name": "Lüderitz"
+    },
+    {
+     "id": "swakopmund",
+     "name": "Swakopmund"
+    },
+    {
+     "id": "walvis-bay",
+     "name": "Walvis Bay"
+    },
+    {
+     "id": "windhoek",
+     "name": "Windhoek"
+    }
+   ]
+  },
+  {
+   "name": "Netherlands",
+   "cities": [
+    {
+     "id": "amsterdam",
+     "name": "Amsterdam"
+    }
+   ]
+  },
+  {
+   "name": "Poland",
+   "cities": [
+    {
+     "id": "warsaw",
+     "name": "Warsaw"
+    }
+   ]
+  },
+  {
+   "name": "Portugal",
+   "cities": [
+    {
+     "id": "lisbon",
+     "name": "Lisbon"
+    }
+   ]
+  },
+  {
+   "name": "Romania",
+   "cities": [
+    {
+     "id": "bucharest",
+     "name": "Bucharest"
+    }
+   ]
+  },
+  {
+   "name": "Slovakia",
+   "cities": [
+    {
+     "id": "bratislava",
+     "name": "Bratislava"
+    }
+   ]
+  },
+  {
+   "name": "Slovenia",
+   "cities": [
+    {
+     "id": "ljubljana",
+     "name": "Ljubljana"
+    }
+   ]
+  },
+  {
+   "name": "Spain",
+   "cities": [
+    {
+     "id": "barcelona",
+     "name": "Barcelona"
+    },
+    {
+     "id": "bilbao",
+     "name": "Bilbao"
+    },
+    {
+     "id": "granada",
+     "name": "Granada"
+    },
+    {
+     "id": "madrid",
+     "name": "Madrid"
+    },
+    {
+     "id": "malaga",
+     "name": "Málaga"
+    },
+    {
+     "id": "seville",
+     "name": "Seville"
+    },
+    {
+     "id": "valencia",
+     "name": "Valencia"
+    }
+   ]
+  },
+  {
+   "name": "Sweden",
+   "cities": [
+    {
+     "id": "stockholm",
+     "name": "Stockholm"
+    }
+   ]
+  },
+  {
+   "name": "United Kingdom",
+   "cities": [
+    {
+     "id": "london",
+     "name": "London"
+    }
+   ]
+  }
+ ],
+ "cities": [
+  {
+   "id": "amsterdam",
+   "name": "Amsterdam",
+   "country": "Netherlands"
+  },
+  {
+   "id": "athens",
+   "name": "Athens",
+   "country": "Greece"
+  },
+  {
+   "id": "barcelona",
+   "name": "Barcelona",
+   "country": "Spain"
+  },
+  {
+   "id": "berlin",
+   "name": "Berlin",
+   "country": "Germany"
+  },
+  {
+   "id": "bilbao",
+   "name": "Bilbao",
+   "country": "Spain"
+  },
+  {
+   "id": "bologna",
+   "name": "Bologna",
+   "country": "Italy"
+  },
+  {
+   "id": "bordeaux",
+   "name": "Bordeaux",
+   "country": "France"
+  },
+  {
+   "id": "bratislava",
+   "name": "Bratislava",
+   "country": "Slovakia"
+  },
+  {
+   "id": "brussels",
+   "name": "Brussels",
+   "country": "Belgium"
+  },
+  {
+   "id": "bucharest",
+   "name": "Bucharest",
+   "country": "Romania"
+  },
+  {
+   "id": "budapest",
+   "name": "Budapest",
+   "country": "Hungary"
+  },
+  {
+   "id": "cologne",
+   "name": "Cologne",
+   "country": "Germany"
+  },
+  {
+   "id": "copenhagen",
+   "name": "Copenhagen",
+   "country": "Denmark"
+  },
+  {
+   "id": "dresden",
+   "name": "Dresden",
+   "country": "Germany"
+  },
+  {
+   "id": "dublin",
+   "name": "Dublin",
+   "country": "Ireland"
+  },
+  {
+   "id": "florence",
+   "name": "Florence",
+   "country": "Italy"
+  },
+  {
+   "id": "frankfurt",
+   "name": "Frankfurt",
+   "country": "Germany"
+  },
+  {
+   "id": "granada",
+   "name": "Granada",
+   "country": "Spain"
+  },
+  {
+   "id": "hamburg",
+   "name": "Hamburg",
+   "country": "Germany"
+  },
+  {
+   "id": "helsinki",
+   "name": "Helsinki",
+   "country": "Finland"
+  },
+  {
+   "id": "leipzig",
+   "name": "Leipzig",
+   "country": "Germany"
+  },
+  {
+   "id": "lisbon",
+   "name": "Lisbon",
+   "country": "Portugal"
+  },
+  {
+   "id": "ljubljana",
+   "name": "Ljubljana",
+   "country": "Slovenia"
+  },
+  {
+   "id": "london",
+   "name": "London",
+   "country": "United Kingdom"
+  },
+  {
+   "id": "luxembourg",
+   "name": "Luxembourg City",
+   "country": "Luxembourg"
+  },
+  {
+   "id": "lyon",
+   "name": "Lyon",
+   "country": "France"
+  },
+  {
+   "id": "luderitz",
+   "name": "Lüderitz",
+   "country": "Namibia"
+  },
+  {
+   "id": "madrid",
+   "name": "Madrid",
+   "country": "Spain"
+  },
+  {
+   "id": "marseille",
+   "name": "Marseille",
+   "country": "France"
+  },
+  {
+   "id": "milan",
+   "name": "Milan",
+   "country": "Italy"
+  },
+  {
+   "id": "munich",
+   "name": "Munich",
+   "country": "Germany"
+  },
+  {
+   "id": "malaga",
+   "name": "Málaga",
+   "country": "Spain"
+  },
+  {
+   "id": "naples",
+   "name": "Naples",
+   "country": "Italy"
+  },
+  {
+   "id": "nice",
+   "name": "Nice",
+   "country": "France"
+  },
+  {
+   "id": "nicosia",
+   "name": "Nicosia",
+   "country": "Cyprus"
+  },
+  {
+   "id": "paris",
+   "name": "Paris",
+   "country": "France"
+  },
+  {
+   "id": "prague",
+   "name": "Prague",
+   "country": "Czechia"
+  },
+  {
+   "id": "riga",
+   "name": "Riga",
+   "country": "Latvia"
+  },
+  {
+   "id": "rome",
+   "name": "Rome",
+   "country": "Italy"
+  },
+  {
+   "id": "seville",
+   "name": "Seville",
+   "country": "Spain"
+  },
+  {
+   "id": "sofia",
+   "name": "Sofia",
+   "country": "Bulgaria"
+  },
+  {
+   "id": "stockholm",
+   "name": "Stockholm",
+   "country": "Sweden"
+  },
+  {
+   "id": "strasbourg",
+   "name": "Strasbourg",
+   "country": "France"
+  },
+  {
+   "id": "swakopmund",
+   "name": "Swakopmund",
+   "country": "Namibia"
+  },
+  {
+   "id": "tallinn",
+   "name": "Tallinn",
+   "country": "Estonia"
+  },
+  {
+   "id": "toulouse",
+   "name": "Toulouse",
+   "country": "France"
+  },
+  {
+   "id": "turin",
+   "name": "Turin",
+   "country": "Italy"
+  },
+  {
+   "id": "valencia",
+   "name": "Valencia",
+   "country": "Spain"
+  },
+  {
+   "id": "valletta",
+   "name": "Valletta",
+   "country": "Malta"
+  },
+  {
+   "id": "venice",
+   "name": "Venice",
+   "country": "Italy"
+  },
+  {
+   "id": "vienna",
+   "name": "Vienna",
+   "country": "Austria"
+  },
+  {
+   "id": "vilnius",
+   "name": "Vilnius",
+   "country": "Lithuania"
+  },
+  {
+   "id": "walvis-bay",
+   "name": "Walvis Bay",
+   "country": "Namibia"
+  },
+  {
+   "id": "warsaw",
+   "name": "Warsaw",
+   "country": "Poland"
+  },
+  {
+   "id": "windhoek",
+   "name": "Windhoek",
+   "country": "Namibia"
+  },
+  {
+   "id": "zagreb",
+   "name": "Zagreb",
+   "country": "Croatia"
+  }
+ ]
+}
